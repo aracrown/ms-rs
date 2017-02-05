@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.rest.UserResourceImpl;
+import com.example.rest.impl.UserResourceImpl;
 import org.glassfish.jersey.server.ResourceConfig;
 
 import javax.inject.Named;

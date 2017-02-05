@@ -1,4 +1,4 @@
-package org.aracrown.rnews;
+package com.example.rest.client;
 
 import com.example.rest.api.UserResource;
 import com.example.rest.api.model.User;

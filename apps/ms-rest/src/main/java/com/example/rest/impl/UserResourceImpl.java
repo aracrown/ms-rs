@@ -1,4 +1,4 @@
-package com.example.rest;
+package com.example.rest.impl;
 
 import com.example.rest.api.UserResource;
 import com.example.rest.api.model.User;

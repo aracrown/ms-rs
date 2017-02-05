@@ -1,4 +1,4 @@
-package org.aracrown.rnews;
+package com.example.rest.client;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
