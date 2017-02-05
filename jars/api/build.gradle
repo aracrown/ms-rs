@@ -1,0 +1,7 @@
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+    compile "javax:javaee-api:7.0"
+}
+
+

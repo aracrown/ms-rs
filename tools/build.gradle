@@ -1,0 +1,60 @@
+buildscript {
+    apply from: "$rootDir/versions.gradle"
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.0.RELEASE"
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${versions.springBoot}")
+        classpath("se.transmode.gradle:gradle-docker:1.2")
+    }
+}
+
+allprojects {
+    apply plugin: "io.spring.dependency-management"
+
+    configurations {
+        compile.exclude module: "spring-boot-starter-tomcat"
+    }
+}
+
+
+subprojects {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+
+    apply plugin: "java"
+    apply plugin: "idea"
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:Camden.SR4"
+        }
+    }
+
+
+    dependencies {
+        testCompile "junit:junit:${versions.junit}"
+        testCompile "org.springframework.boot:spring-boot-starter-test:${versions.springBoot}"
+    }
+
+    task wrapper(type: Wrapper) {
+        gradleVersion = "3.3"
+    }
+}
+
+configure([project(":apps/ms-rest")
+]) {
+    apply plugin: "org.springframework.boot"
+    apply plugin: "docker"
+
+    dependencies {
+        compile("org.springframework.boot:spring-boot-starter-undertow:${versions.springBoot}")
+    }
+}

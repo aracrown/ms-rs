@@ -1,0 +1,9 @@
+ext {
+    versions = [:]
+}
+
+versions += [
+        springBoot: "1.5.1.RELEASE",
+        junit: "4.12"
+]
+

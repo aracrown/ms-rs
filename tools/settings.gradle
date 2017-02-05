@@ -1,0 +1,5 @@
+includeFlat(
+        "jars/api",
+        "jars/client",
+        "apps/ms-rest"
+)

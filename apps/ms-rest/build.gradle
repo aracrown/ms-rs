@@ -1,0 +1,10 @@
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+    compile project (':jars/api')
+    compile('org.springframework.boot:spring-boot-starter-jersey')
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+
