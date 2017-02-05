@@ -1,7 +1,6 @@
-package com.example.rest.client;
+package com.example.rest.client.com.example.rest.impl;
 
 import com.example.rest.api.UserResource;
-import org.aracrown.commons.rest.client.EndpointConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 
@@ -16,7 +15,7 @@ public class UserResourceProducer {
 
     private UserResource userResource;
 
-    UserResourceProducer(EndpointConfig cfg) {
+    public UserResourceProducer(EndpointConfig cfg) {
         this.cfg = cfg;
     }
 

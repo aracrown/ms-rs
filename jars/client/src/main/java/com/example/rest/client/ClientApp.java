@@ -3,7 +3,8 @@ package com.example.rest.client;
 import com.example.rest.api.UserResource;
 import com.example.rest.api.model.User;
 import com.example.rest.api.model.UserFilter;
-import org.aracrown.commons.rest.client.EndpointConfig;
+import com.example.rest.client.com.example.rest.impl.EndpointConfig;
+import com.example.rest.client.com.example.rest.impl.UserResourceProducer;
 
 /**
  * Created by turisto on 05/02/2017.

@@ -1,13 +1,10 @@
-package com.example.rest.client;
+package com.example.rest.client.com.example.rest.impl;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
-import org.aracrown.commons.http.HttpClientProducer;
-import org.aracrown.commons.rest.ExceptionResolverInterceptor;
-import org.aracrown.commons.rest.client.EndpointConfig;
 import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
 import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
 import org.slf4j.Logger;
@@ -46,7 +43,6 @@ public class JaxClientBuilder<T> {
             WebTarget target = newRestfulClient().target(cfg.getEndpoint());
 
             ResteasyWebTarget resteasyWebTarget = (ResteasyWebTarget) target;
-            resteasyWebTarget.register(ExceptionResolverInterceptor.class);
             return resteasyWebTarget.proxy(targetClass);
         } catch (Exception e) {
             LOGGER.error("Could not produce service for class {}", e);
