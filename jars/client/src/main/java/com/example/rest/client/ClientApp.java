@@ -12,7 +12,7 @@ public class ClientApp {
     public static void main(String[] args) {
 
         EndpointConfig cfg = new EndpointConfig();
-        cfg.endpoint("http://localhost:8080/");
+        cfg.endpoint("http://localhost:8080");
         UserResource ur = new UserResourceProducer(cfg).getUserResource();
 
         ur.newUser(new User("12345", "sample"));
