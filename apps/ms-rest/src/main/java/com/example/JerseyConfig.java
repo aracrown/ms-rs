@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.rest.UserResourceImpl;
+import com.example.rest.api.UserResource;
 import org.glassfish.jersey.server.ResourceConfig;
 
 import javax.inject.Named;
@@ -15,6 +15,6 @@ public class JerseyConfig extends ResourceConfig {
     }
 
     private void registerEndpoints() {
-        packages(UserResourceImpl.class.getPackage().getName());
+        packages(UserResource.class.getPackage().getName());
     }
 }

@@ -27,7 +27,12 @@ public class UserResourceImpl implements UserResource {
 
     @Override
     public User retrieve(@PathParam("userId") String userId) {
-        return inMemoryUsers.get(userId);
+        User user = inMemoryUsers.get(userId);
+        if (user == null) {
+            user = new User();
+            user.setUsername("DEMO USER");
+        }
+        return user;
     }
 
     @Override

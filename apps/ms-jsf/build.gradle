@@ -1,0 +1,15 @@
+repositories {
+    mavenCentral()
+    maven { url "http://repository.primefaces.org" }
+}
+
+dependencies {
+	compile project(":jars/client")
+
+	compile("org.joinfaces:jsf-undertow-spring-boot-starter:2.3.+")
+
+	compile("org.springframework.boot:spring-boot-starter-actuator")
+	compile("org.springframework.boot:spring-boot-starter-web")
+
+
+}

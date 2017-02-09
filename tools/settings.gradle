@@ -1,5 +1,6 @@
 includeFlat(
         "jars/api",
         "jars/client",
-        "apps/ms-rest"
+        "apps/ms-rest",
+        "apps/ms-jsf"
 )

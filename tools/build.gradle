@@ -49,7 +49,9 @@ subprojects {
     }
 }
 
-configure([project(":apps/ms-rest")
+configure([
+        project(":apps/ms-rest"),
+        project(":apps/ms-jsf")
 ]) {
     apply plugin: "org.springframework.boot"
     apply plugin: "docker"
